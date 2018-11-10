@@ -1,0 +1,5 @@
+ota-required-cache=0
+ota-type=BLOCK
+post-build=Meizu/meizu_M1822_CN/M1822:8.1.0/OPM1.171019.026/1537930165:user/release-keys
+post-timestamp=1540869955
+pre-device=M1822

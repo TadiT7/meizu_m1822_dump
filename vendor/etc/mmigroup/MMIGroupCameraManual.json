@@ -1,0 +1,40 @@
+{
+  "itemConfig": [
+    {
+      "showName": "QuickCharge",
+      "action": "com.mmigroup.action.QuickCharge",
+      "support": true,
+      "automatic": true,
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.item.BatteryService",
+      "paramconfig": {
+        "is_miui_battery":false,
+        "check_usb_is_unplug": false,
+        "is_show_batteryTemperature": true,
+        "is_quick_charge":true,
+        "Voltage": {
+          "min": 3400,
+          "max": 4500
+        },
+        "temp": {
+          "min": 15,
+          "max": 55
+        },
+        "ChargerVoltage": {
+          "min": 0,
+          "max": 0
+        },
+        "ChargerCurrent": {
+          "min": -3500000,
+          "max": 1500000
+        },
+        "errorBatteryId": [
+          "Fail",
+          "NULL",
+          "Not found",
+          "Generic_Battery"
+        ]
+      }
+    }
+  ]
+}

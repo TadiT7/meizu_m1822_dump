@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sunwave:Config xmlns:sunwave="http://www.sunwavecorp.com/some-location" platform="魅族/闻泰/合力泰-8953-qsee-SW9151">
+  <feature>
+    <key_emulation>false</key_emulation>
+    <!-- 按键功能开关 -->
+    <navigation>false</navigation>
+    <!-- 导航功能开关 -->
+    <health_checking>true</health_checking>
+    <!-- ESD线程开关  -->
+    <self_learning>true</self_learning>
+    <!-- 模板自学习开关 -->
+    <unique_finger>true</unique_finger>
+    <!--  -->
+    <double_verify>true</double_verify>
+    <!--  -->
+    <force_auth>false</force_auth>
+    <!--  -->
+    <config_compare>true</config_compare>
+    <!--  -->
+    </feature>
+  <algo>
+    <enrolling_num_max>15</enrolling_num_max>
+    <!-- 录入最大次数设置 -->
+    <enrolling_samples>12</enrolling_samples>
+    <!--  -->
+    <max_fingers_per_user>5</max_fingers_per_user>
+    <!-- 每个用户拥有指纹数量 -->
+    <double_verify_retry>1</double_verify_retry>
+    <!--  -->
+    <img_quality_score>30</img_quality_score>
+    <!-- 图像质量卡控 -->
+    <img_area_percentage>60</img_area_percentage>
+    <!-- 覆盖面积卡控 -->
+    </algo>
+  <device>
+    <vdd>0</vdd>
+    <!-- 电压选择 默认 0 : 2.8V
+    0: 2.8V
+    1: 2.9V
+    2: 3.0V
+    3: 3.1V
+    4: 3.2V
+    5: 3.3V     -->
+    <key_code>3</key_code>
+    <!-- 默认按键键值 -->
+    <int_mode>0</int_mode>
+    <!-- 中断类型
+    0: 下降沿
+    1: 上升沿 -->
+    </device>
+  <driver>
+    <spi_bus_num>6</spi_bus_num>
+    <!-- SPI总线号（目前只有QSEE方案使用）-->
+    <spi_c_s_num>0</spi_c_s_num>
+    <!-- SPI片选号（目前尚未使用） -->
+    <gpio_mosi_pin>-1</gpio_mosi_pin>
+    <!-- SPI MOSI引脚号（目前尚未使用） -->
+    <gpio_miso_pin>-1</gpio_miso_pin>
+    <!-- SPI MISO引脚号（目前尚未使用） -->
+    <gpio_ck_pin>-1</gpio_ck_pin>
+    <!-- SPI时钟引脚号（目前尚未使用） -->
+    <gpio_cs_pin>-1</gpio_cs_pin>
+    <!-- SPI片选引脚号（目前尚未使用） -->
+    <gpio_rst_pin>-1</gpio_rst_pin>
+    <!-- SPI复位引脚号（目前尚未使用） -->
+    <gpio_int_pin>-1</gpio_int_pin>
+    <!-- SPI中断引脚号（目前尚未使用） -->
+    </driver>
+  <diagnosis>
+    <img_invciper_data>false</img_invciper_data>
+    <!---->
+    <data_dumping>false</data_dumping>
+    <!---->
+    <log_level>2</log_level>
+    <!--调试信息等级
+    0: LOG_LEVEL_ALL,
+    1: LOG_LEVEL_DBG,
+    2: LOG_LEVEL_INF,
+    3: LOG_LEVEL_ERR.
+    默认为1: LOG_LEVEL_DBG -->
+    </diagnosis>
+</sunwave:Config>

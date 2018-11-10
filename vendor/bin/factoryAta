@@ -1,0 +1,32 @@
+#! /system/bin/sh
+cmd=$1
+cmd1=$2
+setprop factory.mmi.ata_adb.result  ""
+if [ "$cmd" = "headsetState" ];then
+	state=`cat /sys/bus/platform/drivers/Accdet_Driver/state`
+	if [ "$state" = "1" ];then
+		setprop factory.mmi.ata_adb.result pass
+	else 
+		setprop factory.mmi.ata_adb.result fail
+	fi
+elif [ "$cmd" = "exit" ] || [ "$cmd" = "stop" ]; then
+	am broadcast -a action.adb.ata.$cmd  >>/dev/null
+elif [ "$cmd" = "mode" ]; then
+	am broadcast -a action.adb.ata.$cmd --ei ${cmd} ${cmd1} >>/dev/null
+else
+	am broadcast -a action.adb.ata.$cmd --es ${cmd} ${cmd1} >>/dev/null
+fi
+i=0
+while ( [ -z $(getprop factory.mmi.ata_adb.result) ] && [ "$i" -le 5 ]  )
+do
+	let "i+=1"
+	sleep 0.1
+
+done
+if [ -z $(getprop factory.mmi.ata_adb.result) ];then
+	setprop factory.mmi.ata_adb.result fail
+fi
+
+echo `getprop factory.mmi.ata_adb.result`
+
+

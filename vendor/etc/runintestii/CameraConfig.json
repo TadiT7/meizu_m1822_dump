@@ -1,0 +1,74 @@
+{
+  "itemConfig":[
+    {
+      "Action":"com.factory.runintestii.camera_mainback",
+      "Support":true,
+      "IsForeGround":true,
+      "RunAlone":false,
+      "Name":"camera_mainback",
+      "ParamOneCycle":50,
+      "ParameOneCycleTime":"5000",
+      "Parameter":{
+        "istake_picture":0
+      }
+    },
+   
+
+    {
+      "Action":"com.factory.runintestii.camera_subback",
+      "Support":true,
+      "IsForeGround":true,
+      "RunAlone":false,
+      "Name":"camera_subback",
+      "ParamOneCycle":50,
+      "ParameOneCycleTime":"5000",
+      "Parameter":{
+        "istake_picture":0
+      }
+    }
+    ,
+    {
+      "Action":"com.factory.runintestii.test2dand3dactivity",
+      "Support":false,
+      "IsForeGround":true,
+      "RunAlone":false,
+      "Name":"software_test2dand3d",
+      "ParamOneCycle":1,
+      "ParameOneCycleTime":"10000",
+      "Parameter":{
+        "interval":5000
+      }
+
+    },
+    {
+      "Action":"com.factory.runintestii.vedio_mainback",
+      "Support":false,
+      "IsForeGround":true,
+      "RunAlone":false,
+      "Name":"vedio_mainback",
+      "ParamOneCycle":1,
+      "ParameOneCycleTime":"180000",
+      "Parameter":{
+        "interval":2000
+      }
+    }
+  ,
+    {
+      "Action":"com.factory.runintestii.vedio_mainfront",
+      "Support":false,
+      "IsForeGround":true,
+      "RunAlone":false,
+      "Name":"vedio_camera",
+      "ParamOneCycle":2,
+      "ParameOneCycleTime":"180000",
+      "Parameter":{
+        "interval":2000
+      }
+    }
+
+
+
+
+
+  ]
+}
